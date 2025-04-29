@@ -1,9 +1,9 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { FileExportParams } from "./types";
+import { FileExportParams } from "../types";
 import { exportToOpenScadContent, exportToTSVContent } from "./utils";
 
-const baseOutputDir = path.join(__dirname, "raw-output");
+const baseOutputDir = path.join(process.cwd(), "raw-output");
 const tsvDir = path.join(baseOutputDir, "tsv");
 const scadDir = path.join(baseOutputDir, "scad");
 

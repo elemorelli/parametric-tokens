@@ -1,4 +1,4 @@
-import { ParsedData } from "./types";
+import { ParsedData } from "../types";
 
 export const cleanText = (text: string) => {
   return text

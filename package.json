@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "src/script.ts",
   "scripts": {
-    "start": "ts-node src/main.ts",
-    "dev": "nodemon src/main.ts",
+    "fetch-data": "ts-node src/fetch-and-export.ts",
+    "fetch-data:dev": "nodemon src/fetch-and-export.ts",
+    "fetch-data:start": "node dist/fetch-and-export.ts",
+    "generate-scad": "ts-node src/generate-openscad.ts",
+    "generate-scad:dev": "nodemon src/generate-openscad.ts",
+    "generate-scad:start": "node dist/generate-openscad.ts",
     "build": "tsc",
-    "start:dist": "node dist/src/main.js",
-    "lint": "eslint --fix src test",
-    "test": "jest",
+    "lint": "eslint --fix src",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
@@ -23,6 +25,7 @@
   "devDependencies": {
     "@types/lodash": "^4.17.16",
     "@types/node": "^22.15.3",
+    "eslint": "^9.25.1",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"

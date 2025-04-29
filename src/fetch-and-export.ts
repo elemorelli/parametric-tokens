@@ -1,7 +1,7 @@
-import { getData } from "./data";
-import { initializeFolders, saveOpenScadData, saveTsvData } from "./fs";
+import { getData } from "./utils/fetch";
+import { initializeFolders, saveOpenScadData, saveTsvData } from "./utils/fs";
 import { ParsedData } from "./types";
-import { cleanText, parseSpecialPlay } from "./utils";
+import { cleanText, parseSpecialPlay } from "./utils/utils";
 
 const main = async () => {
   await initializeFolders();
@@ -41,7 +41,7 @@ const main = async () => {
     const data = Array.from(new Map(modelsData.map((item) => [item.name, item])).values());
 
     if (data.length > 0) {
-      await Promise.allSettled([saveTsvData({ guildName, data }), saveOpenScadData({ guildName, data })]);
+      saveTsvData({ guildName, data });
     } else {
       console.log(`Skipped ${guildName} (no relevant models found)`);
     }

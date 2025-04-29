@@ -55,7 +55,7 @@ export interface CharacterTrait {
   text: string;
 }
 
-export interface Data {
+export interface PlaybookData {
   Guilds: Guild[];
   Models: Model[];
   "Character Plays": CharacterPlay[];
