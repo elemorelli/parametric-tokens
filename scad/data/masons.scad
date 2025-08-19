@@ -20,8 +20,8 @@ tokens = [
   ],
   [
     [ "lines", [ "Superior Strategy", "Additional activation" ] ],
-    [ "font_sizes", [ 6 ] ],
-    [ "apertures", [ 60, 60 ] ]
+    [ "font_sizes", [ 5 ] ],
+    [ "apertures", [ 90, 90 ] ]
   ],
   [
     [ "lines", [ "Topping Out!", "+1 ARM" ] ],
